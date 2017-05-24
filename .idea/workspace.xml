@@ -64,46 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameSparker.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/GameSparker.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="1525" column="13" lean-forward="true" selection-start-line="1525" selection-start-column="13" selection-end-line="1525" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Medium.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/Medium.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xtGraphics.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/xtGraphics.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="3411" column="25" lean-forward="false" selection-start-line="3411" selection-start-column="17" selection-end-line="3411" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RadicalMod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/RadicalMod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Thread.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,8 +77,8 @@
       <file leaf-file-name="SuperRunApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SuperRunApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+            <state relative-caret-position="-252">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -138,17 +98,85 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/DesktopSoundClip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="833">
-              <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+              <caret line="118" column="11" lean-forward="false" selection-start-line="118" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HMInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/HMInterceptor.java">
+      <file leaf-file-name="BASSLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BASSLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="119">
+              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RadicalBASS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RadicalBASS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="411" column="5" lean-forward="true" selection-start-line="411" selection-start-column="5" selection-end-line="411" selection-end-column="5" />
+              <folding>
+                <element signature="e#1386#1413#0" expanded="true" />
+                <element signature="e#13386#13387#0" expanded="true" />
+                <element signature="e#13415#13416#0" expanded="true" />
+                <element signature="e#14105#14106#0" expanded="true" />
+                <element signature="e#14132#14133#0" expanded="true" />
+                <element signature="e#14552#14553#0" expanded="true" />
+                <element signature="e#14595#14596#0" expanded="true" />
+                <element signature="e#14602#14626#0" expanded="true" />
+                <element signature="e#14652#14653#0" expanded="true" />
+                <element signature="e#14674#14675#0" expanded="true" />
+                <marker date="1495660554468" expanded="false" signature="14701:14712" ph=" { " />
+                <marker date="1495660554468" expanded="false" signature="14718:14724" ph=" }" />
+                <marker date="1495660554468" expanded="false" signature="15106:15117" ph=" { " />
+                <marker date="1495660554468" expanded="false" signature="15130:15136" ph=" }" />
+                <marker date="1495660554468" expanded="false" signature="15142:15166" ph="/all/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bass.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/bass_src.zip!/jouvieje/bass/Bass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="145" column="26" lean-forward="false" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BassUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jouvieje/bass/BassUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="74" lean-forward="true" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BassInit.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/bass_src.zip!/jouvieje/bass/BassInit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -165,21 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gettime</find>
-      <find>var12</find>
-      <find>methodcall</find>
-      <find>xtgraphics</find>
-      <find>xtgraphics</find>
-      <find>soundclip</find>
-      <find>engs</find>
-      <find>getAudioClip</find>
-      <find>DesktopContext</find>
-      <find>context</find>
-      <find>stub</find>
-      <find>thread.yield</find>
-      <find>thread</find>
-      <find>stat</find>
-      <find>System.gc</find>
       <find>posit</find>
       <find>thread.sleep</find>
       <find>fase == 0</find>
@@ -195,9 +208,25 @@
       <find>var36</find>
       <find>fadfrom</find>
       <find>Thread.sleep</find>
+      <find>HLogger.log</find>
+      <find>channel</find>
+      <find>chan =</find>
+      <find>freeResources</find>
+      <find>bass_start</find>
+      <find>BASS_Init</find>
+      <find>BASS_ChannelPlay</find>
+      <find>freeres</find>
+      <find>play()</find>
+      <find>end()</find>
+      <find>_start</find>
+      <find>_init</find>
+      <find>alwaysReInit</find>
+      <find>playOnLoad</find>
+      <find>public radicalbass</find>
     </findStrings>
     <replaceStrings>
       <replace>checkHeadless();</replace>
+      <replace>System.out.println</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -378,8 +407,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4485082131602" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="506850296" />
+        <entry key="$PROJECT_DIR$" value="4485087741992" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3434546725" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="829777938" />
       </map>
     </option>
@@ -560,13 +589,16 @@
         <option value="$PROJECT_DIR$/src/main/java/GSPatch.java" />
         <option value="$PROJECT_DIR$/src/main/java/DesktopStup.java" />
         <option value="$PROJECT_DIR$/src/main/java/DesktopStuB.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/RunApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/DesktopContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/DesktopStub.java" />
         <option value="$PROJECT_DIR$/src/main/java/HMInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SuperRunApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/DesktopSoundClip.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/jouvieje/bass/BassUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RadicalBASS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BASSLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SuperRunApp.java" />
       </list>
     </option>
   </component>
@@ -616,20 +648,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mad.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secretagent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="secretagent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -666,6 +684,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secretagent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secretagent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secretagent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secretagent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -682,11 +740,17 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/bass_src.zip!/" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="me.mes" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rafael\Documents\GitHub\secretagent\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1064,12 +1128,12 @@
       <updated>1493774333681</updated>
       <workItem from="1493774351475" duration="6774000" />
       <workItem from="1493876778627" duration="123000" />
-      <workItem from="1495653217165" duration="5434000" />
+      <workItem from="1495653217165" duration="7061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12331000" />
+    <option name="totallyTimeSpent" value="13958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1879" height="1024" extended-state="6" />
@@ -1118,37 +1182,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/mes/Toolkit.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Agent.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/awt/Toolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="646" column="31" lean-forward="false" selection-start-line="646" selection-start-column="31" selection-end-line="646" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/function/BinaryOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4233">
-          <caret line="289" column="0" lean-forward="false" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/net/URLEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2261">
@@ -1182,14 +1215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1462,10 +1487,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/GameSparker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
-          <caret line="1525" column="13" lean-forward="true" selection-start-line="1525" selection-start-column="13" selection-end-line="1525" selection-end-column="13" />
+          <caret line="1525" column="13" lean-forward="false" selection-start-line="1525" selection-start-column="13" selection-end-line="1525" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1474,6 +1507,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/RadicalMod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1494,18 +1535,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/RadicalMod.class">
+    <entry file="jar://$PROJECT_DIR$/libs/NativeBass-1.0.jar!/jouvieje/bass/BassInit.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/bass_src.zip!/jouvieje/bass/BassInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jouvieje/bass/BassUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="74" lean-forward="true" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/bass_src.zip!/jouvieje/bass/Bass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="145" column="26" lean-forward="false" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RadicalBASS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="411" column="5" lean-forward="true" selection-start-line="411" selection-start-column="5" selection-end-line="411" selection-end-column="5" />
+          <folding>
+            <element signature="e#1386#1413#0" expanded="true" />
+            <element signature="e#13386#13387#0" expanded="true" />
+            <element signature="e#13415#13416#0" expanded="true" />
+            <element signature="e#14105#14106#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
+            <element signature="e#14552#14553#0" expanded="true" />
+            <element signature="e#14595#14596#0" expanded="true" />
+            <element signature="e#14602#14626#0" expanded="true" />
+            <element signature="e#14652#14653#0" expanded="true" />
+            <element signature="e#14674#14675#0" expanded="true" />
+            <marker date="1495660554468" expanded="false" signature="14701:14712" ph=" { " />
+            <marker date="1495660554468" expanded="false" signature="14718:14724" ph=" }" />
+            <marker date="1495660554468" expanded="false" signature="15106:15117" ph=" { " />
+            <marker date="1495660554468" expanded="false" signature="15130:15136" ph=" }" />
+            <marker date="1495660554468" expanded="false" signature="15142:15166" ph="/all/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BASSLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SuperRunApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="-252">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1513,7 +1612,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/DesktopSoundClip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
-          <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+          <caret line="118" column="11" lean-forward="false" selection-start-line="118" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
           <folding />
         </state>
       </provider>

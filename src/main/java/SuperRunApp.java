@@ -18,6 +18,8 @@ import java.net.URISyntaxException;
  */
 public class SuperRunApp {
     public static void main(String[] args) throws UnsupportedEncodingException, URISyntaxException {
+        BASSLoader.initializeBASS();
+
         try {
             CtClass cls = ClassPool.getDefault().get("GameSparker");
             CtMethod method = cls.getDeclaredMethod("run");

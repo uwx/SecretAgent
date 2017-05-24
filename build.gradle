@@ -7,6 +7,10 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -14,6 +18,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/javassist/javassist
     compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
+
+    compile name: 'NativeBass-1.0'
+    compile name: 'NativeBass-Examples-1.0'
 }
 
 jar {
