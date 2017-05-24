@@ -29,6 +29,7 @@ public class DesktopSoundClip implements AudioClip {
      * @param is An array of bytes with the audio file data.
      */
     public DesktopSoundClip(byte[] is) {
+        System.out.println("Creating sclip w/ len " + is.length);
         try {
             ByteArrayInputStream bytearrayinputstream = new ByteArrayInputStream(is);
             sound = AudioSystem.getAudioInputStream(bytearrayinputstream);
@@ -61,20 +62,20 @@ public class DesktopSoundClip implements AudioClip {
      */
     @Override
     public void play() {
-        if (loaded) {
-            try {
-                if (!clip.isOpen()) {
-                    try {
-                        clip.open(sound);
-                    } catch (Exception exception) {}
-                    clip.loop(0);
-                } else {
-                    clip.loop(1);
-                }
-                lfrpo = -1;
-                cntcheck = 5;
-            } catch (Exception exception) {}
-        }
+//        if (loaded) {
+//            try {
+//                if (!clip.isOpen()) {
+//                    try {
+//                        clip.open(sound);
+//                    } catch (Exception exception) {}
+//                    clip.loop(0);
+//                } else {
+//                    clip.loop(1);
+//                }
+//                lfrpo = -1;
+//                cntcheck = 5;
+//            } catch (Exception exception) {}
+//        }
     }
 
     /**
@@ -82,18 +83,18 @@ public class DesktopSoundClip implements AudioClip {
      */
     @Override
     public void loop() {
-        if (loaded) {
-            try {
-                if (!clip.isOpen()) {
-                    try {
-                        clip.open(sound);
-                    } catch (Exception exception) {}
-                }
-                clip.loop(70);
-                lfrpo = -2;
-                cntcheck = 0;
-            } catch (Exception exception) {}
-        }
+//        if (loaded) {
+//            try {
+//                if (!clip.isOpen()) {
+//                    try {
+//                        clip.open(sound);
+//                    } catch (Exception exception) {}
+//                }
+//                clip.loop(70);
+//                lfrpo = -2;
+//                cntcheck = 0;
+//            } catch (Exception exception) {}
+//        }
     }
 
     /**
@@ -101,12 +102,12 @@ public class DesktopSoundClip implements AudioClip {
      */
     @Override
     public void stop() {
-        if (loaded) {
-            try {
-                clip.stop();
-                lfrpo = -1;
-            } catch (Exception exception) {}
-        }
+//        if (loaded) {
+//            try {
+//                clip.stop();
+//                lfrpo = -1;
+//            } catch (Exception exception) {}
+//        }
     }
 
     /**
@@ -115,21 +116,21 @@ public class DesktopSoundClip implements AudioClip {
      * a lot of sounds are played.
      */
     public void checkopen() {
-        if (loaded && clip.isOpen() && lfrpo != -2) {
-            if (cntcheck == 0) {
-                int i = clip.getFramePosition();
-                if (lfrpo == i && !clip.isRunning()) {
-                    try {
-                        clip.close();
-                        sound.reset();
-                    } catch (Exception exception) {}
-                    lfrpo = -1;
-                } else {
-                    lfrpo = i;
-                }
-            } else {
-                cntcheck--;
-            }
-        }
+//        if (loaded && clip.isOpen() && lfrpo != -2) {
+//            if (cntcheck == 0) {
+//                int i = clip.getFramePosition();
+//                if (lfrpo == i && !clip.isRunning()) {
+//                    try {
+//                        clip.close();
+//                        sound.reset();
+//                    } catch (Exception exception) {}
+//                    lfrpo = -1;
+//                } else {
+//                    lfrpo = i;
+//                }
+//            } else {
+//                cntcheck--;
+//            }
+//        }
     }
 }

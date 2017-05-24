@@ -31,7 +31,7 @@ public class RunApp extends Panel {
         return icons;
     }
 
-    public static void main(String[] strings) throws URISyntaxException, UnsupportedEncodingException {
+    public static void amain(String[] strings) throws URISyntaxException, UnsupportedEncodingException {
         String res = URLDecoder.decode(GameSparker.class.getResource("GameSparker.class").toString(), "UTF-8");
         if (res.contains("!/")) {
             res = res.substring(0, res.indexOf("!/"));
