@@ -19,6 +19,7 @@ import static jouvieje.bass.Bass.BASS_ErrorGetCode;
 import static jouvieje.bass.Bass.BASS_Free;
 import static jouvieje.bass.Bass.BASS_GetVersion;
 import static jouvieje.bass.Bass.BASS_Init;
+import static jouvieje.bass.Bass.BASS_StreamFree;
 import static jouvieje.bass.defines.BASS_ATTRIB.BASS_ATTRIB_VOL;
 import static jouvieje.bass.defines.BASS_MUSIC.BASS_MUSIC_POSRESET;
 import static jouvieje.bass.defines.BASS_MUSIC.BASS_MUSIC_PRESCAN;
@@ -272,7 +273,7 @@ public class RadicalBASS {
             }
 
             //Initialize BASS
-            if (!BASS_Init(forceNoSoundDevice(-1), forceFrequency(44100), 0, null, null)) { // i think calls BASS_Start
+            if (!checkThrown("BASS_Init", BASS_Init(forceNoSoundDevice(-1), forceFrequency(44100), 0, null, null))) { // i think calls BASS_Start
                 error("Can't initialize device");
                 end();
             }
@@ -309,7 +310,7 @@ public class RadicalBASS {
             }
         }
 
-        if (playOnLoad && !playFile()) {
+        if (!playFile()) {
             //Start a file playing
             end();
         }
@@ -340,11 +341,11 @@ public class RadicalBASS {
 
         chan = stream != null ? stream.asInt() : music.asInt();
 
-        BASS_ChannelSetAttribute(chan, BASS_ATTRIB_VOL, 0.8F);
+        checkThrown("BASS_ChannelSetAttribute", BASS_ChannelSetAttribute(chan, BASS_ATTRIB_VOL, 0.8F));
 
         BASS_ChannelSetSync(chan, BASS_SYNC_END | BASS_SYNC_MIXTIME, 0, loopSyncProc, null); //Set sync to loop at end
         if (playOnLoad) {
-            BASS_ChannelPlay(chan, false); //Start playing
+            checkThrown("BASS_ChannelPlay", BASS_ChannelPlay(chan, false)); //Start playing
         }
         return true;
 
@@ -355,6 +356,10 @@ public class RadicalBASS {
     }
 
     private void end() {
+        checkThrown("BASS_StreamFree", BASS_StreamFree(new HSTREAM() {{
+            this.pointer = chan;
+        }}));
+
         if (!init || deinit) {
             return;
         }
@@ -365,7 +370,7 @@ public class RadicalBASS {
 
     private void freeResources() {
         if (alwaysReInit) {
-            BASS_Free();
+            checkThrown("BASS_Free", BASS_Free());
             bassLibLoaded = false;
         }
     }
@@ -421,13 +426,13 @@ public class RadicalBASS {
     }
 
     public void play() {
-        if (started) {
-            /* Resume output */
-            BASS_ChannelPlay(chan, false);
-        } else {
+        if (!started) {
             run();
             started = true;
         }
+
+        /* Resume output */
+        checkThrown("BASS_ChannelPlay", BASS_ChannelPlay(chan, false));
     }
 
     public void setPaused(final boolean pause) {
@@ -446,7 +451,16 @@ public class RadicalBASS {
     @SuppressWarnings("all")
     public void stop() {
         /* Pause output */
-        BASS_ChannelPause(chan);
+        checkThrown("BASS_ChannelPause", BASS_ChannelPause(chan));
+
+    }
+
+    private boolean checkThrown(String func, boolean res) {
+        if (!res) {
+            error("auto fail from " + func);
+            new Throwable().printStackTrace();
+        }
+        return res;
     }
 
     /*private JFileChooser getFileChooser() {

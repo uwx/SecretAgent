@@ -26,8 +26,8 @@ public class DesktopContext implements AppletContext, Runnable{
     @Override
     public void run(){
         while(true){
-            for(DesktopSoundClip clip:clips)
-                clip.checkopen();
+//            for(DesktopSoundClip clip:clips)
+//                clip.checkopen();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException ex) {}
