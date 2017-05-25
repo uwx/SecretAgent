@@ -70,7 +70,7 @@ public class DesktopSoundClip implements AudioClip {
                     } catch (Exception exception) {}
                     clip.loop(0);
                 } else {
-                    clip.loop(1);
+                    clip.loop(0); // default was 1, but sounds would play twice. API change? NFMM only? did i fuck something unrelated?
                 }
                 lfrpo = -1;
                 cntcheck = 5;
