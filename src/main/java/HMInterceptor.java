@@ -16,7 +16,7 @@ public class HMInterceptor {
         //System.out.println("Tried sleeping for " + ms);
 
         long delay = 46 - ((System.currentTimeMillis() - dates[0]));
-        System.out.println("Delay: " + delay + " / game predicted " + ms);
+        //System.out.println("Delay: " + delay + " / game predicted " + ms);
 
         int fase = getFase();
         if (fase == 0 || fase == 1 || fase == 2 || fase == 3) {

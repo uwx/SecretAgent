@@ -64,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameSparker.class" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameSparker.class" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/GameSparker.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="1449" column="28" lean-forward="false" selection-start-line="1449" selection-start-column="20" selection-end-line="1449" selection-end-column="28" />
+            <state relative-caret-position="419">
+              <caret line="1455" column="30" lean-forward="true" selection-start-line="1455" selection-start-column="30" selection-end-line="1455" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
       <file leaf-file-name="SuperRunApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SuperRunApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="156">
+              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1495680971802" expanded="true" signature="2865:2978" ph="{...}" />
@@ -117,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HMInterceptor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HMInterceptor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/HMInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -1170,12 +1170,12 @@
       <updated>1493774333681</updated>
       <workItem from="1493774351475" duration="6774000" />
       <workItem from="1493876778627" duration="123000" />
-      <workItem from="1495653217165" duration="12565000" />
+      <workItem from="1495653217165" duration="12823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19462000" />
+    <option name="totallyTimeSpent" value="19720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1879" height="1024" extended-state="6" />
@@ -1660,25 +1660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SuperRunApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1495680971802" expanded="true" signature="2865:2978" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HMInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need For Madness 2 - Warzone (by Ten Graves)/madness.jar!/GameSparker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -1697,8 +1678,27 @@
     </entry>
     <entry file="jar://$USER_HOME$/Downloads/aim/! Old NFM versions/Need for Madness Installer (from ArcadeTown)/needformadness_at/{app}/mad.jar!/GameSparker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="1449" column="28" lean-forward="false" selection-start-line="1449" selection-start-column="20" selection-end-line="1449" selection-end-column="28" />
+        <state relative-caret-position="419">
+          <caret line="1455" column="30" lean-forward="true" selection-start-line="1455" selection-start-column="30" selection-end-line="1455" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SuperRunApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1495680971802" expanded="true" signature="2865:2978" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HMInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>
