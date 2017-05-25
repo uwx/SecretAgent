@@ -35,6 +35,8 @@ public class RadicalBASS {
 
     private static final boolean alwaysReInit = false;
     private boolean playOnLoad = false;
+    private boolean hasStarted;
+    private boolean hasPaused;
 
     /**
      * Displays error messages
@@ -386,7 +388,7 @@ public class RadicalBASS {
      * @param songFile a .zip file containing a media file supported by BASS
      */
     public RadicalBASS(final File songFile) {
-        file = songFile;
+        file = new File(System.getProperty("user.dir") + "/" + songFile.toString());
         //run();
     }
 
@@ -430,6 +432,8 @@ public class RadicalBASS {
             run();
             started = true;
         }
+        hasStarted = true;
+        hasPaused = false;
 
         /* Resume output */
         checkThrown("BASS_ChannelPlay", BASS_ChannelPlay(chan, false));
@@ -450,9 +454,11 @@ public class RadicalBASS {
 
     @SuppressWarnings("all")
     public void stop() {
+        if (hasStarted && !hasPaused) {
+            hasPaused = true;
         /* Pause output */
-        checkThrown("BASS_ChannelPause", BASS_ChannelPause(chan));
-
+            checkThrown("BASS_ChannelPause", BASS_ChannelPause(chan));
+        }
     }
 
     private boolean checkThrown(String func, boolean res) {

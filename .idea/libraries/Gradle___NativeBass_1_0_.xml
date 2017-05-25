@@ -4,8 +4,6 @@
       <root url="jar://$PROJECT_DIR$/libs/NativeBass-1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/libs/bass_src.zip!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
