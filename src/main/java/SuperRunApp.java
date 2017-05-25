@@ -7,6 +7,7 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
+import javassist.expr.NewExpr;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
@@ -18,6 +19,8 @@ import java.net.URISyntaxException;
  * @since 24/05/2017
  */
 public class SuperRunApp {
+    public static int datecnt = 0;
+
     public static void main(String[] args) throws UnsupportedEncodingException, URISyntaxException {
         BASSLoader.initializeBASS();
 
@@ -25,6 +28,14 @@ public class SuperRunApp {
             CtClass cls = ClassPool.getDefault().get("GameSparker");
             CtMethod method = cls.getDeclaredMethod("run");
             method.instrument(new ExprEditor() {
+                @Override
+                public void edit(NewExpr newExpr) throws CannotCompileException {
+                    if (newExpr.getClassName().equals("java.util.Date")) {
+                        newExpr.replace("{ HMInterceptor.newDate(); $_ = new java.util.Date(); }");
+                        datecnt++;
+                    }
+                }
+
                 @Override
                 public void edit(MethodCall methodCall) throws CannotCompileException {
                     try {
@@ -59,9 +70,19 @@ public class SuperRunApp {
                     "stream = new SuperStream(new byte[0]); }"); // superstream required for nfm1 to pretend its loaded.
             cls4.getDeclaredMethod("play").setBody("{ _bass.play(); }");
             cls4.getDeclaredMethod("stop").setBody("{ _bass.stop(); }");
-            cls4.getDeclaredMethod("outwithit").setBody("{ }");
+            try {
+                cls4.getDeclaredMethod("outwithit").setBody("{ }");
+            } catch (NotFoundException ignored) {
+                System.err.println("RadicalMod does not contain `#outwithit()`; likely NFM2");
+                cls4.getDeclaredMethod("unloadAll").setBody("{ }");
+                cls4.getDeclaredMethod("unloadMod").setBody("{ }");
+            }
             cls4.getDeclaredMethod("resume").setBody("{ _bass.resume(); }");
-            cls4.getDeclaredMethod("posit").setBody("{ return 240001; }");
+            try {
+                cls4.getDeclaredMethod("posit").setBody("{ return 240001; }");
+            } catch (NotFoundException ignored) {
+                System.err.println("RadicalMod does not contain `#posit()`.");
+            }
 
             cls.toClass();
             cls2.toClass();
