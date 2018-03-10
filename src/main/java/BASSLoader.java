@@ -26,19 +26,7 @@ final class BASSLoader {
     static void initializeBASS() {
         System.out.println("%PATH% is " + System.getProperty("java.library.path"));
 
-//        try {
-//            if (Common.isUnix) {
-//                System.out.println("running on a unix system");
-//                appendToPath(Common.workingDirectory + "/libraries/dlls/linux" + Common.is64bit + "/");
-//            } else if (Common.isMac) {
-//                System.out.println("running on a mac system");
-//                appendToPath(Common.workingDirectory + "/libraries/dlls/mac/");
-//            } else if (Common.isWindows) {
-//                System.out.println("running on a windows system");
-//                appendToPath(Common.workingDirectory + "\\libraries\\dlls\\win" + Common.is64bit + "\\");
-//            }
-//        } catch (@NotNull NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException ignored) {
-//        }
+        System.setProperty("org.lwjgl.librarypath", ".\\libraries\\dlls\\win" + System.getProperty("sun.arch.data.model") + "\\");
 
         init();
     }
