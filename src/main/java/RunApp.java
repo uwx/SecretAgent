@@ -1,19 +1,19 @@
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Image;
 import java.awt.Panel;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
-import java.net.URLDecoder;
 import java.util.ArrayList;
+
+import static holder.FrameHolder.frame;
 
 public class RunApp extends Panel {
 
-    static Frame frame;
     static GameSparker applet;
     public static ArrayList<Image> icons;
 
@@ -22,7 +22,7 @@ public class RunApp extends Panel {
      */
     public static ArrayList<Image> getIcons() {
         if (icons == null) {
-            icons = new ArrayList();
+            icons = new ArrayList<>();
             int[] resols = {16, 32, 48};
             for (int res : resols) {
                 icons.add(Toolkit.getDefaultToolkit().createImage("data/ico_" + res + ".png"));
@@ -31,22 +31,7 @@ public class RunApp extends Panel {
         return icons;
     }
 
-    public static void amain(String[] strings) throws URISyntaxException, UnsupportedEncodingException {
-        String res = URLDecoder.decode(GameSparker.class.getResource("GameSparker.class").toString(), "UTF-8");
-        if (res.contains("!/")) {
-            res = res.substring(0, res.indexOf("!/"));
-        }
-        if (res.contains("file:/")) {
-            res = res.substring(res.indexOf("file:/") + "file:/".length());
-        }
-        if (!res.endsWith("/")) {
-            res = res.substring(0, res.lastIndexOf('/'));
-        }
-        System.out.println(res);
-        System.out.println(new File(res));
-
-        System.setProperty("user.dir", res);
-
+    public static void amain() throws URISyntaxException, UnsupportedEncodingException {
 //        System.setProperty("user.dir", l.get(l.size()-1));
 
         System.runFinalizersOnExit(true);
@@ -72,7 +57,7 @@ public class RunApp extends Panel {
                 exitsequance();
             }
         });
-        applet.setPreferredSize(new java.awt.Dimension(670, 400));//The resolution of your game goes here
+        applet.setPreferredSize(new Dimension(670, 400));//The resolution of your game goes here
         frame.add("Center", applet);
         frame.setResizable(false);//If you plan to make you game support changes in resolution, you can comment out this line.
         frame.pack();

@@ -1,14 +1,19 @@
-
+import javax.imageio.ImageIO;
 import java.applet.Applet;
 import java.applet.AppletContext;
 import java.applet.AudioClip;
 import java.awt.Desktop;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.*;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 //import sun.applet.AppletAudioClip;
 
 /**
@@ -65,6 +70,15 @@ public class DesktopContext implements AppletContext, Runnable{
      */
     @Override
     public Image getImage(URL url) {
+        System.out.println(url);
+        String s = url.toString();
+        try {
+            URL url1 = new URL("jar:" + new File(SuperRunApp.jarPath).toURI().toURL() + "!/" + s.substring(s.lastIndexOf('/') + 1));
+            System.err.println(url1.toString());
+            return ImageIO.read(url1.openStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return Toolkit.getDefaultToolkit().getImage(url);
     }
 

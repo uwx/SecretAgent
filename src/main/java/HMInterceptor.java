@@ -1,3 +1,11 @@
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Enumeration;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
+
 /**
  * Created by Rafael on 24/05/2017.
  *
@@ -40,5 +48,35 @@ public class HMInterceptor {
 
     private static int getFase() {
         return xtg == null ? -1 : xtg.fase;
+    }
+
+    public static void log(Throwable e) {
+        System.err.println("Caught internal: " + e);
+    }
+
+    public static InputStream getStreamFromJar(String name) {
+        try(JarFile file = new JarFile(SuperRunApp.jarPath)) {
+            Enumeration<JarEntry> entries = file.entries();
+            while (entries.hasMoreElements()) {
+                JarEntry entry = entries.nextElement();
+                String entryPath = entry.toString();
+                if (entryPath.equals(name)) {
+                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+                    try (InputStream is = file.getInputStream(entry)) {
+                        int readBytes;
+                        while ((readBytes = is.read()) != -1) {
+                            baos.write((char) readBytes);
+                        }
+                    }
+
+                    return new ByteArrayInputStream(baos.toByteArray());
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.err.print("Found no file " + name + " or errored!");
+        return null;
     }
 }

@@ -1,6 +1,5 @@
 import java.applet.AppletContext;
 import java.applet.AppletStub;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -10,7 +9,7 @@ import java.net.URL;
  */
 public class DesktopStub implements AppletStub{
 
-    AppletContext context=new DesktopContext();
+    private AppletContext context=new DesktopContext();
 
     /**
      * @inheritdoc
@@ -25,11 +24,7 @@ public class DesktopStub implements AppletStub{
      */
     @Override
     public URL getDocumentBase() {
-        try {
-            return new URL("file:///"+System.getProperty("user.dir")+"/");
-        } catch (MalformedURLException ex) {
-            return null;
-        }
+        return SuperRunApp.rootUrl;
     }
 
     /**
@@ -37,11 +32,7 @@ public class DesktopStub implements AppletStub{
      */
     @Override
     public URL getCodeBase() {
-        try {
-            return new URL("file:///"+System.getProperty("user.dir")+"/");
-        } catch (MalformedURLException ex) {
-            return null;
-        }
+        return SuperRunApp.rootUrl;
     }
 
     /**
