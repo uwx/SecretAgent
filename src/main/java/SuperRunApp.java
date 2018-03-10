@@ -3,6 +3,7 @@ import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtConstructor;
+import javassist.CtField;
 import javassist.CtMethod;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -139,7 +140,7 @@ public class SuperRunApp {
 
     private static String OS = System.getProperty("os.name").toLowerCase();
 
-    private static boolean isWindows() {
+    public static boolean isWindows() {
         return OS.contains("win");
     }
 
@@ -180,6 +181,8 @@ public class SuperRunApp {
 //        } catch (NoSuchFieldException e) {
 //            e.printStackTrace();
 //        }
+
+        BASSLoader.initializeBASS();
 
         try {
             ClassPool classPool = ClassPool.getDefault();
@@ -226,6 +229,17 @@ public class SuperRunApp {
                     }
                 }
             });
+            xtg.getDeclaredMethod("getSound").instrument(new ExprEditor() {
+                @Override
+                public void edit(MethodCall methodCall) throws CannotCompileException {
+                    if (methodCall.getClassName().equals("java.applet.AudioClip")
+                            && (methodCall.getMethodName().equals("play")
+                            || methodCall.getMethodName().equals("stop"))) {
+                        System.out.println(methodCall.getClassName() + "#" + methodCall.getMethodName() + " call: deleting");
+                        methodCall.replace("{ }");
+                    }
+                }
+            });
 
             // remove performance fog adjust code
             CtClass medium = classPool.get("Medium");
@@ -235,17 +249,22 @@ public class SuperRunApp {
 //            CtField bassHolderField = new CtField(classPool.get("RadicalBASS"), "_bass", cls4);
 //            bassHolderField.setModifiers(Modifier.PUBLIC | Modifier.TRANSIENT);
 //            cls4.addField(bassHolderField);
-            rdmod.getDeclaredConstructors()[0].setBody("{ }");
-            rdmod.getDeclaredMethod("play").setBody("{ }");
-            rdmod.getDeclaredMethod("stop").setBody("{ }");
+            CtField hansen_identifier = new CtField(classPool.get("java.lang.String"), "_hansen_Identifier", rdmod);
+            hansen_identifier.setModifiers(Modifier.PUBLIC);
+            rdmod.addField(hansen_identifier, "null");
+            rdmod.getDeclaredMethod("play").setBody("{ HMInterceptor.play(_hansen_Identifier); }");
+            rdmod.getDeclaredMethod("stop").setBody("{ HMInterceptor.pause(_hansen_Identifier); }");
             try {
-                rdmod.getDeclaredMethod("outwithit").setBody("{ }");
+                rdmod.getDeclaredMethod("outwithit").setBody("{ HMInterceptor.unload(_hansen_Identifier); }");
+                rdmod.getDeclaredConstructors()[0].setBody("{ _hansen_Identifier = $1; HMInterceptor.load(_hansen_Identifier); stream = new SuperStream(new byte[0]); }");
             } catch (NotFoundException ignored) {
                 System.err.println("RadicalMod does not contain `#outwithit()`; likely NFM2");
-                rdmod.getDeclaredMethod("unloadAll").setBody("{ }");
-                rdmod.getDeclaredMethod("unloadMod").setBody("{ }");
+                rdmod.getDeclaredMethod("unloadAll").setBody("{ HMInterceptor.unload(_hansen_Identifier); }");
+                rdmod.getDeclaredMethod("unloadMod").setBody("{ HMInterceptor.unload(_hansen_Identifier); }");
+                rdmod.getDeclaredMethod("loadMod").setBody("{ HMInterceptor.load(_hansen_Identifier); }");
+                rdmod.getDeclaredConstructors()[0].setBody("{ _hansen_Identifier = $1; loaded = 1; }");
             }
-            rdmod.getDeclaredMethod("resume").setBody("{ }");
+            rdmod.getDeclaredMethod("resume").setBody("{ HMInterceptor.play(_hansen_Identifier); }");
             try {
                 rdmod.getDeclaredMethod("posit").setBody("{ return 240001; }");
             } catch (NotFoundException ignored) {

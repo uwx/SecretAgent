@@ -1,8 +1,11 @@
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
@@ -75,5 +78,55 @@ public class HMInterceptor {
         }
         System.err.print("Found no file " + name + " or errored!");
         return null;
+    }
+
+    public static class RStore {
+        RadicalBASS bass;
+        boolean isLoaded;
+    }
+    //
+    private static final Map<String, RStore> mods = new HashMap<>();
+    private static String lastMod = null;
+
+    public static void load(String mod) {
+        System.out.println("Loading " + mod);
+        RStore rs = new RStore();
+        rs.bass = new RadicalBASS(new File(SuperRunApp.rootDir, mod));
+        rs.isLoaded = true;
+        mods.put(mod, rs);
+    }
+
+    public static void play(String mod) {
+        System.out.println("Playing " + mod);
+        RStore rs = mods.get(mod);
+        // can't have two mods loaded at once!!!! and nfm1 only unloads at game exit, so we have to unload manually
+        if (lastMod != null && !lastMod.equals(mod)) {
+            System.out.println("Trashing " + lastMod);
+            RStore rs2 = mods.get(lastMod);
+            if (rs2.isLoaded) {
+                rs2.bass.unload();
+                rs2.isLoaded = false;
+            }
+        }
+        if (!rs.isLoaded) {
+            System.out.println("ReLoading " + mod);
+            rs.bass = new RadicalBASS(new File(SuperRunApp.rootDir, mod));
+            rs.isLoaded = true;
+        }
+        rs.bass.play();
+        lastMod = mod;
+    }
+
+    public static void pause(String mod) {
+        System.out.println("Pausing " + mod);
+        RStore rs = mods.get(mod);
+        rs.bass.setPaused(true);
+    }
+
+    public static void unload(String mod) {
+        System.out.println("Unloading " + mod);
+        RStore rs = mods.get(mod);
+        rs.bass.unload();
+        rs.isLoaded = false;
     }
 }

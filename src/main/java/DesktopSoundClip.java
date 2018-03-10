@@ -22,7 +22,10 @@ public class DesktopSoundClip implements AudioClip {
     /**
      * Creates an unloaded, empty SoundClip.
      */
-    public DesktopSoundClip() {}
+    public DesktopSoundClip() {
+        System.out.println("Empty soundclip!");
+        new Throwable("Empty soundclip!").printStackTrace();
+    }
 
     /**
      * Creates a SoundClip from an array of bytes.
@@ -52,7 +55,7 @@ public class DesktopSoundClip implements AudioClip {
             clip = (Clip) AudioSystem.getLine(info);
             loaded = true;
         } catch (Exception exception) {
-            System.out.println(new StringBuilder().append("Loading Clip error: ").append(exception).toString());
+            System.out.println("Loading Clip error: " + exception);
             loaded = false;
         }
     }
@@ -62,19 +65,24 @@ public class DesktopSoundClip implements AudioClip {
      */
     @Override
     public void play() {
+        System.out.println("Playing");
         if (loaded) {
             try {
                 if (!clip.isOpen()) {
                     try {
                         clip.open(sound);
-                    } catch (Exception exception) {}
+                    } catch (Exception exception) {
+                        exception.printStackTrace();
+                    }
                     clip.loop(0);
                 } else {
-                    clip.loop(0); // default was 1, but sounds would play twice. API change? NFMM only? did i fuck something unrelated?
+                    clip.loop(1); // this is REALLY SMART don't change it
                 }
                 lfrpo = -1;
                 cntcheck = 5;
-            } catch (Exception exception) {}
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
         }
     }
 
@@ -83,17 +91,22 @@ public class DesktopSoundClip implements AudioClip {
      */
     @Override
     public void loop() {
+        System.out.println("Looping");
         if (loaded) {
             try {
                 if (!clip.isOpen()) {
                     try {
                         clip.open(sound);
-                    } catch (Exception exception) {}
+                    } catch (Exception exception) {
+                        exception.printStackTrace();
+                    }
                 }
                 clip.loop(70);
                 lfrpo = -2;
                 cntcheck = 0;
-            } catch (Exception exception) {}
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
         }
     }
 
@@ -106,7 +119,9 @@ public class DesktopSoundClip implements AudioClip {
             try {
                 clip.stop();
                 lfrpo = -1;
-            } catch (Exception exception) {}
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
         }
     }
 
@@ -123,7 +138,9 @@ public class DesktopSoundClip implements AudioClip {
                     try {
                         clip.close();
                         sound.reset();
-                    } catch (Exception exception) {}
+                    } catch (Exception exception) {
+                        exception.printStackTrace();
+                    }
                     lfrpo = -1;
                 } else {
                     lfrpo = i;
