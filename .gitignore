@@ -3,3 +3,9 @@ logs
 /j.bat
 /build/
 .idea/workspace.xml
+
+*.class
+build
+out
+libs
+*.lock
