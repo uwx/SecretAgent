@@ -25,7 +25,7 @@ dependencies {
 
     compileOnly files($/C:\Users\Rafael\Documents\GitHub\project aim\! Old NFM versions\NFM MDX v1\mad.jar/$)
 
-    compile files("libraries/dlls/win64")
+    //compile files("libraries/dlls/win64")
 }
 
 task copyToLib(type: Copy) {
@@ -37,6 +37,15 @@ jar {
     dependsOn(copyToLib)
 
     archiveName = "${rootProject.name}-${rootProject.version}.jar"
+
+    copy {
+        from "libraries/dlls/win64"
+        into "$buildDir/libs/libraries/dlls/win64"
+    }
+    copy {
+        from "libraries/dlls/win32"
+        into "$buildDir/libs/libraries/dlls/win32"
+    }
 
     manifest {
         attributes 'Main-Class': 'SuperRunApp'
