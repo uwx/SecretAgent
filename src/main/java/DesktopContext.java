@@ -60,7 +60,9 @@ public class DesktopContext implements AppletContext, Runnable{
                 clipper.start();
             }
             return clip;
-        }catch(Exception ex){}
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
         return new DesktopSoundClip();
         //        return new AppletAudioClip(url);
     }
