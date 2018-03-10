@@ -17,22 +17,40 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     // https://mvnrepository.com/artifact/org.javassist/javassist
-    compile group: 'org.javassist', name: 'javassist', version: '3.22.0-CR1'
+    compile group: 'org.javassist', name: 'javassist', version: '3.22.0-GA'
 
     compile name: 'NativeBass-1.0'
     compile name: 'NativeBass-Examples-1.0'
+    compile name: 'trashers-lib-1.0'
+
+    compileOnly files($/C:\Users\Rafael\Documents\GitHub\project aim\! Old NFM versions\NFM MDX v1\mad.jar/$)
+
+    compile files("libraries/dlls/win64")
+}
+
+task copyToLib(type: Copy) {
+    into "$buildDir/libs/libs"
+    from configurations.runtime.filter { !it.toString().contains("dlls")}
 }
 
 jar {
+    dependsOn(copyToLib)
+
     archiveName = "${rootProject.name}-${rootProject.version}.jar"
+
     manifest {
-        attributes(
-                'Premain-Class': 'Agent',
-                'Can-Redefine-Classes': 'true',
-                'Can-Retransform-Classes': 'true',
-                'Can-Set-Native-Method-Prefix': 'true',
-                'Implementation-Title': "ClassLogger",
-                'Implementation-Version': rootProject.version
-        )
+        attributes 'Main-Class': 'SuperRunApp'
+        attributes "Class-Path": configurations.compile.collect { "libs/" + it.getName() }.join(' ')
     }
+
+//    manifest {
+//        attributes(
+//                'Premain-Class': 'Agent',
+//                'Can-Redefine-Classes': 'true',
+//                'Can-Retransform-Classes': 'true',
+//                'Can-Set-Native-Method-Prefix': 'true',
+//                'Implementation-Title': "ClassLogger",
+//                'Implementation-Version': rootProject.version
+//        )
+//    }
 }
