@@ -29,6 +29,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +50,7 @@ public class SuperRunApp {
     public static PipedInputStream pipedInputStream = new PipedInputStream();
     public static PipedOutputStream pipedOutputStream;
     private static JTextArea textArea = new JTextArea(15, 30);
+    public static String gameHash;
 
     static {
         try {
@@ -140,6 +143,7 @@ public class SuperRunApp {
         return OS.contains("win");
     }
 
+    // add --illegal-access=deny to VM options
     /**
      * Append to path.
      *
@@ -157,8 +161,13 @@ public class SuperRunApp {
         fieldSysPath.set(null, null);
     }
 
-    public static void runGame(String jarPath) throws IOException, URISyntaxException, IllegalAccessException {
+    public static void runGame(String jarPath) throws IOException, URISyntaxException {
         SuperRunApp.jarPath = jarPath;
+
+        gameHash = new CrockfordBase32().encodeToString(
+                Hashing.goodFastHash(256)
+                        .hashBytes(Files.readAllBytes(Paths.get(jarPath))).asBytes()).toLowerCase();
+        System.out.println("Hash: " + gameHash);
 
         {
             System.setOut(new PrintStream(new AnalyzingOutputStream(System.out)));
