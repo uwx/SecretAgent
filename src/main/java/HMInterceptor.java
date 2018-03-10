@@ -2,7 +2,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -23,7 +22,7 @@ public class HMInterceptor {
 
     public static void sleep(long ms) throws InterruptedException {
         //System.out.println("Tried sleeping for " + ms);
-        System.out.println("Sleep " + Arrays.toString(dates));
+        //System.out.println("Sleep " + Arrays.toString(dates));
 
         long delay = 46 - ((System.currentTimeMillis() - dates[0]));
         //System.out.println("Delay: " + delay + " / game predicted " + ms);
