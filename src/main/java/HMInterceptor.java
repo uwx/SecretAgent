@@ -2,6 +2,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -22,16 +23,13 @@ public class HMInterceptor {
 
     public static void sleep(long ms) throws InterruptedException {
         //System.out.println("Tried sleeping for " + ms);
+        System.out.println("Sleep " + Arrays.toString(dates));
 
         long delay = 46 - ((System.currentTimeMillis() - dates[0]));
         //System.out.println("Delay: " + delay + " / game predicted " + ms);
 
-        int fase = getFase();
-        if (fase == 0 || fase == 1 || fase == 2 || fase == 3) {
-            Thread.sleep(delay > 16 ? delay : 16); // min out at 16ms to prevent flickering
-        } else {
-            Thread.sleep(ms); // nfm runs at 27fps in some menus and those seem fine so let it do its thing
-        }
+        //int fase = getFase();
+        Thread.sleep(delay > 16 ? delay : 16); // min out at 16ms to prevent flickering
         createdDates = 0;
     }
 
